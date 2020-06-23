@@ -16,24 +16,30 @@
 		<script src="js/main.js"></script>
 		<script>
             $(document).ready(function(){
-                $('.visual_slide').slick({
-                    slidesToShow:2,
-                    slidesToScroll:1,
-                    responsive: [
-                        {
-                          breakpoint: 768,
-                          settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: true,
-                            arrows:false,
-                            autoplay:true,
-                            autoplaySpeed:2000
-                          }
+                //visual_slide
+                var visual_swiper = new Swiper('.visual_slide', {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
                         }
-                    ]
+                    }
                 });
+                
+                //실시간 인기상품
                 $('.best-pick').slick({
                     infinite: true,
                     arrows:false,
@@ -43,7 +49,16 @@
                     cssEase: 'linear'
                 });
                 
-                //moblie
+                //recomment_list
+                var recom_swiper = new Swiper('.recom_lst', 
+                    {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        freeMode: true,
+                        pagination: false
+                });
+                
+                //moblie nav
                 var viewIndex = 0;
                 var moveSilde = false;
                 var movePass = 1;
@@ -544,28 +559,55 @@
                     </div>
                     <div class="main_section">
                         <!-- visual_slide -->   
-                        <div class="visual_slide">
-                            <div>
+                        <div class="visual_slide swiper-container">
+                            <div class="swiper-wrapper">  
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527155259_1.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
-                            <div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527133640_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529160603.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>    
                             </div>
-                            <div>
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529162457.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527155259_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529164157_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            </div>
+                            <!-- arrow_button -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                            <!-- //arrow_button -->
                         </div>
                         <!-- //visual_slide -->
                         <!-- best-chart -->
@@ -1494,28 +1536,54 @@
                         <div class="main_section">
                         <!-- //main_section -->
 					    <!-- visual_slide -->   
-                        <div class="visual_slide">
-                            <div>
+                        <div class="visual_slide swiper-container">
+                            <div class="swiper-wrapper">  
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527155259_1.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
-                            <div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527133640_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529160603.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>    
                             </div>
-                            <div>
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529162457.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527155259_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529164157_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            </div>
+                            <!-- pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- //pagination -->
                         </div>
                         <!-- //visual_slide -->
                         <!-- 실시간 인기상품 -->
@@ -2395,39 +2463,68 @@
                     <div class="category03">
                         <div class="main_section">
 					    <!-- visual_slide -->   
-                        <div class="visual_slide">
-                            <div>
+                        <div class="visual_slide swiper-container">
+                            <div class="swiper-wrapper">  
+                            <div class="swiper-slide">
                                 <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200615111500.jpg);"></a>
                                 <a href="#none" class="text_bx">
-                                    <strong class="title">내 책상 위 갓 겜!</strong>   
-                                    <span class="desc">전설적 게임을 굿즈로 만나다</span>
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
-                            <div>
-                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/mainarea/20200616180324.jpg);"></a>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527134027.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529160603.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>    
                             </div>
-                            <div>
-                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/mainarea/20200529174514.gif);"></a>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529162457.jpg);"></a>
                                 <a href="#none" class="text_bx">
                                     <strong class="title">SUMMER SHOWER </strong>   
                                     <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
                                 </a>
                             </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200527155259_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none" class="thumb" style="background-image: url(https://mpointmall.hyundaicard.com/upload/display/plan/theme/20200529164157_1.jpg);"></a>
+                                <a href="#none" class="text_bx">
+                                    <strong class="title">SUMMER SHOWER </strong>   
+                                    <span class="desc">자꾸 씻고 싶어지는 싱그러운 목욕 제품</span>
+                                </a>
+                            </div>
+                            </div>
+                            <!-- pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- //pagination -->
                         </div>
                         <!-- //visual_slide -->
-                        <div class="quick_lst">
-                            <ul>
-                                <li class="quick01"><a href="#none"><span>주방가전</span></a></li>
-                                <li class="quick02"><a href="#none">TIME DEAL</a></li>
-                                <li class="quick03"><a href="#none">LUCKY DRAW</a></li>
-                                <li class="quick04"><a href="#none">BEST 50</a></li>
+                        </div>
+                        <!-- recomment list -->
+                        <div class="recom_lst swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="recom01 swiper-slide"><a href="#none">
+                                <span>주방가전</span></a></li>
+                                <li class="recom02 swiper-slide"><a href="#none"><span>생활가전</span></a></li>
+                                <li class="recom03 swiper-slide"><a href="#none"><span>영상/음향</span></a></li>
+                                <li class="recom04 swiper-slide"><a href="#none"><span>디지털기기</span></a></li>
                             </ul>
                         </div>
-                        </div>
+                        <!-- //recomment list -->
                         <!-- //main_section -->
                         <!-- product_column -->
                         <div class="product_column">
