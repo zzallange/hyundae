@@ -56,16 +56,17 @@ a {font-family:'gothic_a1'; text-decoration:none; color:#000}
 
 .main_section {}
 .main_section .visual_slide {}
-.main_section .visual_slide .slick-slide {margin: 0 10px;}
-.main_section .visual_slide .slick-slide .thumb {position: relative; width: 100%; padding-bottom: 63.79%; border-radius: 1.2rem; background-position: 50%; background-repeat: no-repeat; background-size: cover;}
 
-.main_section .visual_slide .slick-slide .text_bx {margin-top: 2.5rem; width: 100%; text-align: center;}
-.main_section .visual_slide .slick-slide .text_bx .title {display: block; font-size: 2.2rem; line-height: 4.2rem; font-weight: bold;}
-.main_section .visual_slide .slick-slide .desc {font-size: 1.6rem; line-height: 2.8rem; letter-spacing: -0.05em; color: #595959;}
+.main_section .visual_slide .swiper-slide .thumb {position: relative; width: 100%; padding-bottom: 63.79%; border-radius: 1.2rem; background-position: 50%; background-repeat: no-repeat; background-size: cover;}
 
-.main_section .visual_slide .slick-arrow {position: absolute; top: calc(50% - 7rem); z-index: 10; display: block; width: 3rem; height: 6rem; font-size: 0; cursor: pointer;}
-.main_section .visual_slide .slick-prev {left: 2.4rem; background: url(../img/btn-crsl-prev.svg) no-repeat ;}
-.main_section .visual_slide .slick-next {right: 2.4rem; background: url(../img/btn-crsl-next.svg) no-repeat 100% 100%;}
+.main_section .visual_slide .swiper-slide .text_bx {margin-top: 2.5rem; width: 100%; text-align: center;}
+.main_section .visual_slide .swiper-slide .text_bx .title {display: block; font-size: 2.2rem; line-height: 4.2rem; font-weight: bold;}
+.main_section .visual_slide .swiper-slide .desc {font-size: 1.6rem; line-height: 2.8rem; letter-spacing: -0.05em; color: #595959;}
+
+.main_section .visual_slide .swiper-button-next, .main_section .visual_slide .swiper-button-prev{position: absolute; top: calc(50% - 6rem); z-index: 10; display: block; width: 3rem; height: 6rem; font-size: 0; cursor: pointer;}
+.main_section .visual_slide .swiper-button-prev {left: 2.4rem; background: url(../img/btn-crsl-prev.svg) no-repeat ;}
+.main_section .visual_slide .swiper-button-next {right: 2.4rem; background: url(../img/btn-crsl-next.svg) no-repeat 100% 100%;}
+
 
 .main_section .best-chart {position: relative; margin-top: 9.6rem;}
 .main_section .best-chart:after {content:'';display: block;clear: both}
@@ -242,14 +243,13 @@ a {font-family:'gothic_a1'; text-decoration:none; color:#000}
     
     /* HOME */
     .main_section {padding: 0 2rem;}
-    .visual_slide .slick-dots {margin-top: 2rem; text-align: center;}
-    .visual_slide .slick-dots li {display: inline-block; margin-right: 1rem; width: .4rem; height: .4rem; border-radius: 50%; opacity: .2; background: #000;}
-    .visual_slide .slick-dots li button {font-size: 0; line-height: 0; border: 0 none; background: none;}
-    .visual_slide .slick-dots .slick-active {width: 4rem; border-radius: .2rem; opacity: 1;}
+    .main_section .visual_slide .swiper-pagination {margin: 4.8rem 0 0 2rem; font-size: 0; position: relative; text-align: left;}
+    .main_section .visual_slide .swiper-pagination-bullet {width: .4rem; height: .4rem; border-radius: .2rem;}
+    .main_section .visual_slide .swiper-pagination-bullet-active {width: 4rem; border-radius: .2rem; background: rgba(0,0,0,.9);}
     
-    .chart_lst {position: relative; float: none; margin: 2.5rem 0 5rem; width:100%;}
+    .chart_lst {position: relative; float: none; margin: 7.5rem 0 5rem; width:100%;}
 
-    .quick_lst {clear: both; float: none;  width: 100%;}
+    .quick_lst {clear: both; float: none; width: 100%;}
     .quick_lst ul {display: flex; justify-content: space-between; width: 100%;}
     .quick_lst ul li {width: calc((100% - 5rem) / 4); font-size: 0;}
     .quick_lst ul li ~ li {margin-left: 0;}
@@ -271,18 +271,17 @@ a {font-family:'gothic_a1'; text-decoration:none; color:#000}
     /* TECH */
     .category03 {padding-top: 0;}
     .category03 .main_section {padding: 0;}
-    .category03 .main_section .visual_slide .slick-slide {margin: 0;}
-    .category03 .main_section .visual_slide .slick-slide .thumb {border-radius: 0;}
-    
-    .category03 .quick_lst {padding: 0 2rem;}
-    .category03 .quick_lst li a {position: relative; border: 0 none; font-size: 1.9rem;}
-    .category03 .quick_lst li a:after {content:''; position: absolute; left: 0; right: 0; bottom: 0; top: 0; border-radius: 20%; background: rgba(0,0,0,.2);}
-    .category03 .quick_lst .quick01 a { background:url(https://mpointmall.hyundaicard.com/upload/display/banner/20200106130938.jpg) no-repeat; background-size: contain;}
-    .category03 .quick_lst li a span {display: inline; vertical-align: middle; height: 100%;}
-    
-    .category03 .quick_lst .quick02 a {}
-    .category03 .quick_lst .quick03 a {}
-    .category03 .quick_lst .quick04 a {}
+    .category03 .main_section .visual_slide .thumb {border-radius: 0;}
+    .recom_lst {padding: 0 2rem;margin-top: 3rem; }
+    .recom_lst ul {width: 100%; font-size: 0;}
+    .recom_lst ul .swiper-slide {width: 13rem; height: 13rem;}
+    .recom_lst ul li a {position: relative; padding-bottom: 100%; width: 100%; height: 0; font-size: 0; border-radius: 15%; }
+    .recom_lst ul li a:after {content:''; position: absolute; left: 0; top: 0; bottom: 0; right: 0; border-radius: 15%; background: rgba(0,0,0,.4);}
+    .recom_lst ul li a span {display: block; position: absolute; top: 50%; z-index: 10; width: 100%; text-align: center; font-size: 1.6rem; font-weight: 800; color: #fff; transform: translateY(-50%);}
+    .recom_lst .recom01 a {background: url(https://mpointmall.hyundaicard.com/upload/display/banner/20200106130938.jpg) no-repeat; background-size: contain;}
+    .recom_lst .recom02 a{background:url(https://mpointmall.hyundaicard.com/upload/display/banner/20200106130947.jpg) no-repeat;background-size: contain;}
+    .recom_lst .recom03 a{background: url(https://mpointmall.hyundaicard.com/upload/display/banner/20200106130957.jpg) no-repeat;background-size: contain;}
+    .recom_lst .recom04 a{background: url(https://mpointmall.hyundaicard.com/upload/display/banner/20200106131007.jpg) no-repeat; background-size: contain;}
     
     /* top버튼 */
     a.btn_top {position:fixed; bottom:2rem; right:2rem; width:4.8rem; height:4.8rem; font-size:0; color:transparent; vertical-align:top; cursor:pointer; visibility:hidden; opacity:0; -webkit-transition: all .3s;transition: all .3s; z-index:90;}
